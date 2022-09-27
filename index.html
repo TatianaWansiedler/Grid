@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100vh;
+            background:rgb(43,46,85);
+        }
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            background:rgb(43,46,85);
+            display: grid;
+            grid-template-columns: repeat(4, calc(100% / 4));
+            grid-template-rows: repeat(3, calc(100% / 3));
+            grid-gap: 10px;
+            grid-template-areas:
+          "sidebar header header article"
+          "sidebar cell1 cell2 sidebar1"
+          "sidebar cell3 cell4 sidebar1";
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background: rgb(108,190,79);
+        }
+        .header {
+            grid-area: header;
+            background: rgb(108,190,79);
+        }
+        .cell1 {
+            grid-area: cell1;
+            background: rgb(251,178,46);
+        }
+        .cell2 {
+            grid-area: cell2;
+            background: rgb(235,52,55);
+        }
+        .cell3 {
+            grid-area: cell3;
+            background: rgb(235,52,55);
+        }
+        .cell4 {
+            grid-area: cell4;
+            background: rgb(251,178,46);
+        }
+        .article {
+            grid-area: article;
+            background: rgb(235,52,55);
+        }
+        .sidebar1 {
+            grid-area: sidebar1;
+            background: rgb(108,190,79);
+        }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+        <aside class="sidebar"></aside>
+        <header class="header"></header>
+        <div class="cell1"></div>
+        <div class="cell2"></div>
+        <div class="cell3"></div>
+        <div class="cell4"></div>
+        <article class="article"></article>
+        <aside class="sidebar1"></aside>
+    </main>
+  </body>
+</html>
