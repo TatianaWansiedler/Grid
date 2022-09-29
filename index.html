@@ -11,22 +11,22 @@
         box-sizing: border-box;
       }
       body,
-      html {
-        height: 100vh;
-        background: rgb(43, 46, 85);
-      }
+      html,
       .wrapper {
         height: 100%;
         width: 100%;
+      }
+      .wrapper {
         background: rgb(43, 46, 85);
         display: grid;
-        grid-template-columns: repeat(4, calc(100% / 4));
-        grid-template-rows: repeat(3, calc(100% / 3));
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-gap: 10px;
         grid-template-areas:
           "sidebar header header article"
           "sidebar cell1 cell2 sidebar1"
           "sidebar cell3 cell4 sidebar1";
+          justify-content: center;
       }
       .sidebar {
         grid-area: sidebar;
